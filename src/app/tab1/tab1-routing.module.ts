@@ -14,7 +14,15 @@ const routes: Routes = [
   {
     path: 'doctor-type',
     loadChildren: () => import('./doctor-type/doctor-type.module').then( m => m.DoctorTypePageModule)
+  },  {
+    path: 'prebooking',
+    loadChildren: () => import('./prebooking/prebooking.module').then( m => m.PrebookingPageModule)
+  },
+  {
+    path: 'booking',
+    loadChildren: () => import('./booking/booking.module').then( m => m.BookingPageModule)
   }
+
 ];
 
 @NgModule({

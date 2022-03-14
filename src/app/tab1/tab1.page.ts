@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { ToastController, NavController } from '@ionic/angular';
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
@@ -15,6 +15,8 @@ export class Tab1Page {
   categories = {
     slidesPerView: 2.5,
   };
-  constructor() {}
-
+  constructor(    private nav: NavController,) {}
+  goto(){
+    this.nav.navigateForward('tabs/tab1/doctorType');
+  }
 }

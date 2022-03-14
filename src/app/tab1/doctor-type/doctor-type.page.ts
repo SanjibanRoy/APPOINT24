@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ToastController, NavController } from '@ionic/angular';
 @Component({
   selector: 'app-doctor-type',
   templateUrl: './doctor-type.page.html',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DoctorTypePage implements OnInit {
 
-  constructor() { }
+  constructor(  private nav: NavController,) { }
 
   ngOnInit() {
   }
@@ -16,4 +16,7 @@ export class DoctorTypePage implements OnInit {
     loop: true,
     spaceBetween: -100,
   };
+  goto(){
+    this.nav.navigateForward('tabs/tab1/doctor');
+  }
 }
