@@ -12,6 +12,14 @@ const routes: Routes = [
         loadChildren: () => import('../tab1/tab1.module').then(m => m.Tab1PageModule)
       },
       {
+        path: 'tab1/doctor',
+        loadChildren: () => import('../tab1/doctor/doctor-routing.module').then(m => m.DoctorPageRoutingModule)
+      },
+      {
+        path: 'tab1/doctorType',
+        loadChildren: () => import('../tab1/doctor-type/doctor-type-routing.module').then(m => m.DoctorTypePageRoutingModule)
+      },
+      {
         path: 'tab2',
         loadChildren: () => import('../tab2/tab2.module').then(m => m.Tab2PageModule)
       },
