@@ -1,0 +1,38 @@
+<!-- <ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Devdactic App</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+ 
+<ion-content>
+    <div class="input-group">
+      <ion-item>
+        <ion-input type="email" placeholder="Email" ></ion-input>
+      </ion-item>
+    </div>
+    <div class="input-group">
+      <!-- <div class="errors">
+        <span>Email is required</span>
+        <span >Email is invalid</span>
+      </div> -->
+      <ion-item>
+        <ion-input type="password" placeholder="Password"></ion-input>
+      </ion-item>
+      <!-- <div  class="errors">
+        <span >Password is required</span>
+        <span>Password needs to be 6 characters</span>
+      </div> -->
+    </div>
+    <ion-button type="submit" expand="block" (click)="login()">Log in</ion-button>
+    <ion-button type="button" expand="block" color="light" fill="clear">Not yet a member? Sign up!
+    </ion-button>
+    <ion-button type="button" expand="block" color="tertiary">
+      <ion-icon name="logo-google" slot="start"></ion-icon>
+      Sign in with Google
+    </ion-button>
+    <ion-button type="button" expand="block" color="tertiary">
+      <ion-icon name="logo-apple" slot="start"></ion-icon>
+      Sign in with Apple
+    </ion-button>
+
+</ion-content>
