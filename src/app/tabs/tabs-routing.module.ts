@@ -20,6 +20,14 @@ const routes: Routes = [
         loadChildren: () => import('../tab1/doctor-type/doctor-type-routing.module').then(m => m.DoctorTypePageRoutingModule)
       },
       {
+        path: 'tab1/prebooking',
+        loadChildren: () => import('../tab1/prebooking/prebooking-routing.module').then(m => m.PrebookingPageRoutingModule)
+      },
+      {
+        path: 'tab1/booking',
+        loadChildren: () => import('../tab1/booking/booking-routing.module').then(m => m.BookingPageRoutingModule)
+      },
+      {
         path: 'tab2',
         loadChildren: () => import('../tab2/tab2.module').then(m => m.Tab2PageModule)
       },
