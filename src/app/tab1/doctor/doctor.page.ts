@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController } from '@ionic/angular';
-
+import { ToastController, NavController } from '@ionic/angular';
 @Component({
   selector: 'app-doctor',
   templateUrl: './doctor.page.html',
@@ -8,7 +8,7 @@ import { AlertController } from '@ionic/angular';
 })
 export class DoctorPage implements OnInit {
 
-  constructor(public alertController: AlertController) { }
+  constructor(public alertController: AlertController, private nav: NavController,) { }
 
   ngOnInit() {
   }
@@ -26,8 +26,8 @@ export class DoctorPage implements OnInit {
         {
           name: 'PLease Select a Date',
           type: 'date',
-          min: '2017-03-01',
-          max: '2018-01-12'
+          min: '2022-03-16',
+          max: '2022-03-18'
         }
       ],
       buttons: [
@@ -41,7 +41,7 @@ export class DoctorPage implements OnInit {
         }, {
           text: 'Ok',
           handler: () => {
-            console.log('Confirm Ok');
+            this.nav.navigateForward('tabs/tab1/prebooking');
           }
         }
       ]
